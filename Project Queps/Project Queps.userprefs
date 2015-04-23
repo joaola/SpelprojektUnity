@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="assets\scripts\AnimatorLogic.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AnimatorLogic.cs">
     <Files>
-      <File FileName="assets\scripts\AnimatorLogic.cs" Line="165" Column="16" />
-      <File FileName="Assets\Scripts\sword.cs" Line="29" Column="21" />
-      <File FileName="Assets\Scripts\cam.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyCheck.cs" Line="94" Column="4" />
-      <File FileName="Assets\Scripts\enemyChar.cs" Line="47" Column="18" />
+      <File FileName="Assets\Scripts\enemyChar.cs" Line="20" Column="19" />
+      <File FileName="Assets\Scripts\AnimatorLogic.cs" Line="181" Column="5" />
+      <File FileName="Assets\Scripts\EnemyCheck.cs" Line="39" Column="25" />
+      <File FileName="Assets\Scripts\sword.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerCheck.cs" Line="26" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

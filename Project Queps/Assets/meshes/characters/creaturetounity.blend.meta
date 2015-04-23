@@ -1,52 +1,65 @@
 fileFormatVersion: 2
 guid: 34ef1a067af83ca44a7c4607e9f2ff41
+timeCreated: 1429598797
+licenseType: Free
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cylinder
-    100004: Cylinder_001
-    100006: Sphere_004
-    100008: Armature_001
-    100010: Bone
-    100012: Bone_003
-    100014: Bone_004
-    100016: Bone_005
-    100018: Bone_006
-    100020: Bone_007
-    100022: Bone_009
-    400000: //RootNode
-    400002: Cylinder
-    400004: Cylinder_001
-    400006: Sphere_004
-    400008: Armature_001
-    400010: Bone
-    400012: Bone_003
-    400014: Bone_004
-    400016: Bone_005
-    400018: Bone_006
-    400020: Bone_007
-    400022: Bone_009
-    2300000: Cylinder
-    2300002: Cylinder_001
-    2300004: Sphere_004
-    3300000: Cylinder
-    3300002: Cylinder_001
-    3300004: Sphere_004
-    4300000: Cylinder_001
-    4300002: Sphere_004
-    4300004: Cylinder
+    100000: Armature_001
+    100002: Bone
+    100004: //RootNode
+    100006: Cylinder
+    100008: Cylinder_001
+    100010: Cylinder_002
+    100012: head
+    100014: lowerLeg
+    100016: neck
+    100018: rib
+    100020: scytheblade
+    100022: scytheshaft
+    100024: Sphere_004
+    100026: spine
+    100028: upperleg
+    400000: Armature_001
+    400002: Bone
+    400004: //RootNode
+    400006: Cylinder
+    400008: Cylinder_001
+    400010: Cylinder_002
+    400012: head
+    400014: lowerLeg
+    400016: neck
+    400018: rib
+    400020: scytheblade
+    400022: scytheshaft
+    400024: Sphere_004
+    400026: spine
+    400028: upperleg
+    4300000: Cylinder
+    4300002: Cylinder_001
+    4300004: Sphere_004
+    4300006: Cylinder_002
     7400000: Default Take
-    7400002: walk
-    7400004: Idle
-    7400006: jumping
-    7400008: jumpingforward
-    7400010: walkjump
-    7400012: tele
+    7400002: Attack1
+    7400004: hit
+    7400006: Idle
+    7400008: idleToWeaponready
+    7400010: tele
+    7400012: WeaponreadyToIdle
+    7400014: weponreadyIdle
+    7400016: Attack2
+    7400018: floatBackwards
+    7400020: floatForward
+    7400022: rotateLeft
+    7400024: rotateRight
+    7400026: strafeLeft
+    7400028: strafeRight
+    7400030: weaponreadyFloatForward
     9500000: //RootNode
     13700000: Cylinder
     13700002: Cylinder_001
-    13700004: Sphere_004
+    13700004: Cylinder_002
+    13700006: Sphere_004
   materials:
     importMaterials: 1
     materialName: 0
@@ -55,6 +68,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
+    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -63,10 +77,66 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: walk
-      takeName: walk
-      firstFrame: 0
-      lastFrame: 13
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 58
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack1
+      takeName: Attack1
+      firstFrame: -1
+      lastFrame: 54
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -92,21 +162,251 @@ ModelImporter:
         weight: 1
       - path: Armature_001/Bone
         weight: 1
-      - path: Armature_001/Bone/Bone_003
+      - path: Armature_001/Bone/scytheshaft
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004
+      - path: Armature_001/Bone/scytheshaft/scytheblade
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009
+      - path: Armature_001/Bone/spine
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009/Bone_005
+      - path: Armature_001/Bone/spine/rib
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006
+      - path: Armature_001/Bone/spine/rib/neck
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006/Bone_007
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
         weight: 1
       - path: Cylinder
         weight: 1
       - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack2
+      takeName: Attack2
+      firstFrame: -1
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: floatBackwards
+      takeName: floatBackwards
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: floatForward
+      takeName: floatForward
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: hit
+      takeName: hit
+      firstFrame: -1
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
         weight: 1
       - path: Sphere_004
         weight: 1
@@ -142,29 +442,91 @@ ModelImporter:
         weight: 1
       - path: Armature_001/Bone
         weight: 1
-      - path: Armature_001/Bone/Bone_003
+      - path: Armature_001/Bone/scytheshaft
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004
+      - path: Armature_001/Bone/scytheshaft/scytheblade
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009
+      - path: Armature_001/Bone/spine
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009/Bone_005
+      - path: Armature_001/Bone/spine/rib
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006
+      - path: Armature_001/Bone/spine/rib/neck
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006/Bone_007
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
         weight: 1
       - path: Cylinder
         weight: 1
       - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
         weight: 1
       - path: Sphere_004
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: jumping
-      takeName: jumping
+      name: idleToWeaponready
+      takeName: idleToWeaponready
+      firstFrame: -1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rotateLeft
+      takeName: rotateLeft
       firstFrame: -1
       lastFrame: 39
       wrapMode: 0
@@ -174,7 +536,7 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 1
-      loopBlendOrientation: 1
+      loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
@@ -192,29 +554,35 @@ ModelImporter:
         weight: 1
       - path: Armature_001/Bone
         weight: 1
-      - path: Armature_001/Bone/Bone_003
+      - path: Armature_001/Bone/scytheshaft
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004
+      - path: Armature_001/Bone/scytheshaft/scytheblade
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009
+      - path: Armature_001/Bone/spine
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009/Bone_005
+      - path: Armature_001/Bone/spine/rib
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006
+      - path: Armature_001/Bone/spine/rib/neck
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006/Bone_007
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
         weight: 1
       - path: Cylinder
         weight: 1
       - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
         weight: 1
       - path: Sphere_004
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: jumpingforward
-      takeName: jumpingforward
+      name: rotateRight
+      takeName: rotateRight
       firstFrame: -1
       lastFrame: 39
       wrapMode: 0
@@ -224,7 +592,7 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 1
-      loopBlendOrientation: 1
+      loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
@@ -242,31 +610,37 @@ ModelImporter:
         weight: 1
       - path: Armature_001/Bone
         weight: 1
-      - path: Armature_001/Bone/Bone_003
+      - path: Armature_001/Bone/scytheshaft
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004
+      - path: Armature_001/Bone/scytheshaft/scytheblade
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009
+      - path: Armature_001/Bone/spine
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009/Bone_005
+      - path: Armature_001/Bone/spine/rib
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006
+      - path: Armature_001/Bone/spine/rib/neck
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006/Bone_007
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
         weight: 1
       - path: Cylinder
         weight: 1
       - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
         weight: 1
       - path: Sphere_004
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: walkjump
-      takeName: walkjump
-      firstFrame: 0
-      lastFrame: 13
+      name: strafeLeft
+      takeName: strafeLeft
+      firstFrame: -1
+      lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -292,21 +666,83 @@ ModelImporter:
         weight: 1
       - path: Armature_001/Bone
         weight: 1
-      - path: Armature_001/Bone/Bone_003
+      - path: Armature_001/Bone/scytheshaft
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004
+      - path: Armature_001/Bone/scytheshaft/scytheblade
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009
+      - path: Armature_001/Bone/spine
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009/Bone_005
+      - path: Armature_001/Bone/spine/rib
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006
+      - path: Armature_001/Bone/spine/rib/neck
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006/Bone_007
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
         weight: 1
       - path: Cylinder
         weight: 1
       - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: strafeRight
+      takeName: strafeRight
+      firstFrame: -1
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
         weight: 1
       - path: Sphere_004
         weight: 1
@@ -342,21 +778,195 @@ ModelImporter:
         weight: 1
       - path: Armature_001/Bone
         weight: 1
-      - path: Armature_001/Bone/Bone_003
+      - path: Armature_001/Bone/scytheshaft
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004
+      - path: Armature_001/Bone/scytheshaft/scytheblade
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009
+      - path: Armature_001/Bone/spine
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_004/Bone_009/Bone_005
+      - path: Armature_001/Bone/spine/rib
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006
+      - path: Armature_001/Bone/spine/rib/neck
         weight: 1
-      - path: Armature_001/Bone/Bone_003/Bone_006/Bone_007
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
         weight: 1
       - path: Cylinder
         weight: 1
       - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: weaponreadyFloatForward
+      takeName: weaponreadyFloatForward
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: WeaponreadyToIdle
+      takeName: WeaponreadyToIdle
+      firstFrame: -1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: weponreadyIdle
+      takeName: weponreadyIdle
+      firstFrame: -1
+      lastFrame: 81
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Bone
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft
+        weight: 1
+      - path: Armature_001/Bone/scytheshaft/scytheblade
+        weight: 1
+      - path: Armature_001/Bone/spine
+        weight: 1
+      - path: Armature_001/Bone/spine/rib
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck
+        weight: 1
+      - path: Armature_001/Bone/spine/rib/neck/head
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg
+        weight: 1
+      - path: Armature_001/Bone/spine/upperleg/lowerLeg
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      - path: Cylinder_002
         weight: 1
       - path: Sphere_004
         weight: 1
@@ -365,7 +975,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .349999994
+    globalScale: .300000012
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -373,11 +983,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -400,3 +1012,5 @@ ModelImporter:
   animationType: 2
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

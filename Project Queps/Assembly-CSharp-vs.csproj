@@ -46,15 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="assets\scripts\AnimatorLogic.cs" />
-     <Compile Include="assets\scripts\EnemyCheck.cs" />
-     <Compile Include="assets\scripts\GroundCheck.cs" />
-     <Compile Include="assets\scripts\cam.cs" />
-     <Compile Include="assets\scripts\camerafovchange.cs" />
-     <Compile Include="assets\scripts\enemyChar.cs" />
-     <Compile Include="assets\scripts\hideCursor.cs" />
-     <Compile Include="assets\scripts\sceneChanger.cs" />
-     <Compile Include="assets\scripts\sword.cs" />
+     <Compile Include="Assets\Scripts\AnimatorLogic.cs" />
+     <Compile Include="Assets\Scripts\EnemyCheck.cs" />
+     <Compile Include="Assets\Scripts\GroundCheck.cs" />
+     <Compile Include="Assets\Scripts\PlayerCheck.cs" />
+     <Compile Include="Assets\Scripts\cam.cs" />
+     <Compile Include="Assets\Scripts\camerafovchange.cs" />
+     <Compile Include="Assets\Scripts\enemyChar.cs" />
+     <Compile Include="Assets\Scripts\hideCursor.cs" />
+     <Compile Include="Assets\Scripts\sceneChanger.cs" />
+     <Compile Include="Assets\Scripts\sword.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

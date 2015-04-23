@@ -29,6 +29,8 @@ public class AnimatorLogic : MonoBehaviour {
 	public RaycastHit hit;
 	private float shieldWeight;
 	private float attacktime = 0;
+	private float rollWeight;
+	private float rolltime = 0;
 	#endregion
 	
 	#region fps
@@ -42,6 +44,7 @@ public class AnimatorLogic : MonoBehaviour {
 		maxHealth = health;
 		print("player health is:" + health);
 		shieldWeight = 0f;
+		rollWeight = 0f;
 
 		animator = GetComponent<Animator>();
 	}
@@ -51,7 +54,7 @@ public class AnimatorLogic : MonoBehaviour {
 		PlayerFunc ();
 		LockOnFunc ();
 		ShieldFunc ();
-		LineOfSight ();
+		//LineOfSight ();
 	}
 
 	private void PlayerFunc(){
@@ -88,10 +91,27 @@ public class AnimatorLogic : MonoBehaviour {
 				GetComponent<AudioSource>().PlayOneShot(jumpsound);
 			}	
 		}
+		if(rolltime > 0)
+			rolltime -= Time.deltaTime;
+		//if (rolltime <= 0)
+			//animator.SetLayerWeight (2, 1);
+		// Roll
+		if (Input.GetButtonDown ("roll")) {
+			if(animator.GetBool("groundCheck")){
+				animator.SetLayerWeight(2, 0);
+				animator.SetBool("roll",true);
+				rolltime = 1.2f;
+			}
+		}
+		if (Input.GetButtonUp ("roll")) {
+			animator.SetBool("roll",false);
+		}
+
 		//Attack
 		animator.SetBool("attack", false);
-		if (Input.GetButtonDown ("Attack")) {
-			attacktime = 1f;
+		if (Input.GetButtonDown ("Attack") && rolltime <= 0) {
+			animator.SetLayerWeight (2, 1);
+			attacktime = 1.2f;
 			animator.SetBool("attack", true);
 		}
 	}
@@ -102,9 +122,9 @@ public class AnimatorLogic : MonoBehaviour {
 			Transform temp = targetcheck.GetComponent<EnemyCheck>().FindNextEnemy(targ).transform;
 			GameObject tempg = targetcheck.GetComponent<EnemyCheck> ().FindNextEnemy (targ);
 
-			if(tempg != null && temp != null){
-				target = targetcheck.GetComponent<EnemyCheck>().FindNextEnemy(targ).transform;
-				targ = targetcheck.GetComponent<EnemyCheck> ().FindNextEnemy (targ);
+			if(temp != null){
+				target = temp;
+				targ = tempg;
 			}
 		}
 
@@ -155,8 +175,10 @@ public class AnimatorLogic : MonoBehaviour {
 			if(attacktime > 0)
 				attacktime -= Time.deltaTime;
 
-			if (attacktime < 0)
-				attacktime = 0;
+			if (attacktime < 0){
+				attacktime = 0; // fixa 
+				animator.SetLayerWeight (2, rollWeight = Mathf.MoveTowards (rollWeight, 0f, Time.deltaTime * speed));
+			}
 		}
 	}
 

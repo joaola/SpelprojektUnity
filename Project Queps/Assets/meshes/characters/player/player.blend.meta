@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5bcd8dafabbbd204980e9e8506332928
-timeCreated: 1428908613
+timeCreated: 1429598859
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -184,21 +184,26 @@ ModelImporter:
     4300028: Circle
     7400000: Default Take
     7400002: attack
-    7400004: floatForward
-    7400006: idle
-    7400008: lockOnBackward
-    7400010: PoseLib
-    7400012: strafeLeft
-    7400014: strafeRight
-    7400016: shield
-    7400018: runCycleForward
-    7400020: standingIdle
-    7400022: standingAttack
-    7400024: walkCycleBackward
-    7400026: walkstrafeLeft
-    7400028: walkstrafeRight
-    7400030: standingAttack2
-    7400032: standingAttack3
+    7400004: dodgeLeft
+    7400006: dodgeRight1
+    7400008: floatForward
+    7400010: idle
+    7400012: lockOnBackward
+    7400014: PoseLib
+    7400016: rollForward
+    7400018: rollLeft
+    7400020: rollRight
+    7400022: runCycleForward
+    7400024: shield
+    7400026: standingAttack
+    7400028: standingAttack2
+    7400030: standingAttack3
+    7400032: standingIdle
+    7400034: strafeLeft
+    7400036: strafeRight
+    7400038: walkCycleBackward
+    7400040: walkstrafeLeft
+    7400042: walkstrafeRight
     9500000: //RootNode
     13700000: Plane
     13700002: Plane_001
@@ -221,7 +226,7 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -231,8 +236,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Default Take
       takeName: Default Take
-      firstFrame: 0
-      lastFrame: 38
+      firstFrame: -1
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -414,7 +419,371 @@ ModelImporter:
       name: attack
       takeName: attack
       firstFrame: 0
-      lastFrame: 31
+      lastFrame: 64
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/movement
+        weight: 1
+      - path: Armature/movement/hip_center
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/butt_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/butt_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
+        weight: 1
+      - path: Armature/movement/hip_center/pelvix
+        weight: 1
+      - path: Armature/movement/hip_center/stomach
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle_001
+        weight: 1
+      - path: Circle_002
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      - path: Plane_005
+        weight: 1
+      - path: Plane_006
+        weight: 1
+      - path: Plane_007
+        weight: 1
+      - path: Plane_008
+        weight: 1
+      - path: Plane_009
+        weight: 1
+      - path: Plane_010
+        weight: 1
+      - path: Plane_011
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dodgeLeft
+      takeName: dodgeLeft
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/movement
+        weight: 1
+      - path: Armature/movement/hip_center
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/butt_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/butt_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
+        weight: 1
+      - path: Armature/movement/hip_center/pelvix
+        weight: 1
+      - path: Armature/movement/hip_center/stomach
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle_001
+        weight: 1
+      - path: Circle_002
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      - path: Plane_005
+        weight: 1
+      - path: Plane_006
+        weight: 1
+      - path: Plane_007
+        weight: 1
+      - path: Plane_008
+        weight: 1
+      - path: Plane_009
+        weight: 1
+      - path: Plane_010
+        weight: 1
+      - path: Plane_011
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dodgeRight1
+      takeName: dodgeRight1
+      firstFrame: 0
+      lastFrame: 21
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -596,18 +965,18 @@ ModelImporter:
       name: floatForward
       takeName: floatForward
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 64
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -778,18 +1147,18 @@ ModelImporter:
       name: idle
       takeName: idle
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 64
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -960,18 +1329,18 @@ ModelImporter:
       name: lockOnBackward
       takeName: lockOnBackward
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 64
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -1321,9 +1690,9 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: strafeLeft
-      takeName: strafeLeft
-      firstFrame: 0
+      name: rollForward
+      takeName: rollForward
+      firstFrame: -1
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
@@ -1503,8 +1872,372 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: strafeRight
-      takeName: strafeRight
+      name: rollLeft
+      takeName: rollLeft
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/movement
+        weight: 1
+      - path: Armature/movement/hip_center
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/butt_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/butt_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
+        weight: 1
+      - path: Armature/movement/hip_center/pelvix
+        weight: 1
+      - path: Armature/movement/hip_center/stomach
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle_001
+        weight: 1
+      - path: Circle_002
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      - path: Plane_005
+        weight: 1
+      - path: Plane_006
+        weight: 1
+      - path: Plane_007
+        weight: 1
+      - path: Plane_008
+        weight: 1
+      - path: Plane_009
+        weight: 1
+      - path: Plane_010
+        weight: 1
+      - path: Plane_011
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rollRight
+      takeName: rollRight
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/movement
+        weight: 1
+      - path: Armature/movement/hip_center
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/butt_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/butt_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
+        weight: 1
+      - path: Armature/movement/hip_center/pelvix
+        weight: 1
+      - path: Armature/movement/hip_center/stomach
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle_001
+        weight: 1
+      - path: Circle_002
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      - path: Plane_005
+        weight: 1
+      - path: Plane_006
+        weight: 1
+      - path: Plane_007
+        weight: 1
+      - path: Plane_008
+        weight: 1
+      - path: Plane_009
+        weight: 1
+      - path: Plane_010
+        weight: 1
+      - path: Plane_011
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: runCycleForward
+      takeName: runCycleForward
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -1711,51 +2444,51 @@ ModelImporter:
       - path: 
         weight: 1
       - path: Armature
-        weight: 0
+        weight: 1
       - path: Armature/movement
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_L
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_L/butt_L
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_L/leg_L
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_R/butt_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_R/leg_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/pelvix
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/neck
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/neck/head
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_L
         weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
@@ -1795,45 +2528,45 @@ ModelImporter:
       - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
         weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
-        weight: 0
+        weight: 1
       - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
-        weight: 0
+        weight: 1
       - path: Circle
         weight: 1
       - path: Circle_001
@@ -1867,10 +2600,374 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: runCycleForward
-      takeName: runCycleForward
+      name: standingAttack
+      takeName: standingAttack
       firstFrame: 0
-      lastFrame: 40
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/movement
+        weight: 1
+      - path: Armature/movement/hip_center
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/butt_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/butt_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
+        weight: 1
+      - path: Armature/movement/hip_center/pelvix
+        weight: 1
+      - path: Armature/movement/hip_center/stomach
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle_001
+        weight: 1
+      - path: Circle_002
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      - path: Plane_005
+        weight: 1
+      - path: Plane_006
+        weight: 1
+      - path: Plane_007
+        weight: 1
+      - path: Plane_008
+        weight: 1
+      - path: Plane_009
+        weight: 1
+      - path: Plane_010
+        weight: 1
+      - path: Plane_011
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: standingAttack2
+      takeName: standingAttack2
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/movement
+        weight: 1
+      - path: Armature/movement/hip_center
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/butt_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/butt_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
+        weight: 1
+      - path: Armature/movement/hip_center/pelvix
+        weight: 1
+      - path: Armature/movement/hip_center/stomach
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle_001
+        weight: 1
+      - path: Circle_002
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      - path: Plane_005
+        weight: 1
+      - path: Plane_006
+        weight: 1
+      - path: Plane_007
+        weight: 1
+      - path: Plane_008
+        weight: 1
+      - path: Plane_009
+        weight: 1
+      - path: Plane_010
+        weight: 1
+      - path: Plane_011
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: standingAttack3
+      takeName: standingAttack3
+      firstFrame: 0
+      lastFrame: 55
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2231,21 +3328,203 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: standingAttack
-      takeName: standingAttack
+      name: strafeLeft
+      takeName: strafeLeft
       firstFrame: 0
-      lastFrame: 38
+      lastFrame: 64
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/movement
+        weight: 1
+      - path: Armature/movement/hip_center
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/butt_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/butt_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
+        weight: 1
+      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
+        weight: 1
+      - path: Armature/movement/hip_center/pelvix
+        weight: 1
+      - path: Armature/movement/hip_center/stomach
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
+        weight: 1
+      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle_001
+        weight: 1
+      - path: Circle_002
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      - path: Plane_005
+        weight: 1
+      - path: Plane_006
+        weight: 1
+      - path: Plane_007
+        weight: 1
+      - path: Plane_008
+        weight: 1
+      - path: Plane_009
+        weight: 1
+      - path: Plane_010
+        weight: 1
+      - path: Plane_011
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: strafeRight
+      takeName: strafeRight
+      firstFrame: 0
+      lastFrame: 64
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -2416,7 +3695,7 @@ ModelImporter:
       name: walkCycleBackward
       takeName: walkCycleBackward
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2780,371 +4059,7 @@ ModelImporter:
       name: walkstrafeRight
       takeName: walkstrafeRight
       firstFrame: 0
-      lastFrame: 29
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/movement
-        weight: 1
-      - path: Armature/movement/hip_center
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/butt_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/leg_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/butt_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/leg_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
-        weight: 1
-      - path: Armature/movement/hip_center/pelvix
-        weight: 1
-      - path: Armature/movement/hip_center/stomach
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck/head
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
-        weight: 1
-      - path: Circle
-        weight: 1
-      - path: Circle_001
-        weight: 1
-      - path: Circle_002
-        weight: 1
-      - path: Plane
-        weight: 1
-      - path: Plane_001
-        weight: 1
-      - path: Plane_002
-        weight: 1
-      - path: Plane_003
-        weight: 1
-      - path: Plane_004
-        weight: 1
-      - path: Plane_005
-        weight: 1
-      - path: Plane_006
-        weight: 1
-      - path: Plane_007
-        weight: 1
-      - path: Plane_008
-        weight: 1
-      - path: Plane_009
-        weight: 1
-      - path: Plane_010
-        weight: 1
-      - path: Plane_011
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: standingAttack2
-      takeName: standingAttack2
-      firstFrame: 0
-      lastFrame: 39
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/movement
-        weight: 1
-      - path: Armature/movement/hip_center
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/butt_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/leg_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_L/leg_L/shin_L/tarsal_L/toe_L
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/butt_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/leg_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R
-        weight: 1
-      - path: Armature/movement/hip_center/hip_R/leg_R/shin_R/tarsal_R/toe_R
-        weight: 1
-      - path: Armature/movement/hip_center/pelvix
-        weight: 1
-      - path: Armature/movement/hip_center/stomach
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck/head
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck/head/eye_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/neck/head/jaw
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_006/Bone_002_L_007/Bone_002_L_008
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_009/Bone_002_L_010/Bone_002_L_011
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_013/Bone_002_L_014/Bone_002_L_015
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_017/Bone_002_L_018/Bone_002_L_019
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_L/arm_upper_L/arm_lower_L/hand_L/Bone_002_L_021/Bone_002_L_022/Bone_002_L_023
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_006/Bone_002_R_007/Bone_002_R_008
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_009/Bone_002_R_010/Bone_002_R_011
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_013/Bone_002_R_014/Bone_002_R_015
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_017/Bone_002_R_018/Bone_002_R_019
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/Bone_002_R_021/Bone_002_R_022/Bone_002_R_023
-        weight: 1
-      - path: Armature/movement/hip_center/stomach/chest/shoulder_R/arm_upper_R/arm_lower_R/hand_R/sword
-        weight: 1
-      - path: Circle
-        weight: 1
-      - path: Circle_001
-        weight: 1
-      - path: Circle_002
-        weight: 1
-      - path: Plane
-        weight: 1
-      - path: Plane_001
-        weight: 1
-      - path: Plane_002
-        weight: 1
-      - path: Plane_003
-        weight: 1
-      - path: Plane_004
-        weight: 1
-      - path: Plane_005
-        weight: 1
-      - path: Plane_006
-        weight: 1
-      - path: Plane_007
-        weight: 1
-      - path: Plane_008
-        weight: 1
-      - path: Plane_009
-        weight: 1
-      - path: Plane_010
-        weight: 1
-      - path: Plane_011
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: standingAttack3
-      takeName: standingAttack3
-      firstFrame: 0
-      lastFrame: 39
+      lastFrame: 28
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

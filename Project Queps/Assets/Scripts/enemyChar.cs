@@ -6,6 +6,8 @@ public class enemyChar : MonoBehaviour {
 	public int enemyHealth;
 	private int maxenemyHealth;
 	public GameObject DeathCheck;
+	public Transform playerTarget;
+	public GameObject fovCone;
 
 	private float invTimer = 0.5f;
 	// Use this for initialization
@@ -15,6 +17,7 @@ public class enemyChar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		lookAtplayer ();
 		if (enemyHealth <= 0){
 			Debug.Log("the enemy has died" + enemyHealth);
 			DeathCheck.GetComponent<EnemyCheck>().RemoveEnemy(gameObject);
@@ -27,6 +30,15 @@ public class enemyChar : MonoBehaviour {
 			invTimer-=Time.deltaTime;
 	}
 
+	public void lookAtplayer()
+	{
+		if (fovCone.GetComponent<PlayerCheck> ().getSeesPlayer ()) {
+			var newRotation = Quaternion.LookRotation (playerTarget.position - transform.position).eulerAngles;
+			newRotation.x = 0;
+			newRotation.z = 0;
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (newRotation), Time.deltaTime * 6f);
+		}
+	}
 	/*void OnCollisionEnter(Collision col) {
 		if(invTimer<0)
 		{
