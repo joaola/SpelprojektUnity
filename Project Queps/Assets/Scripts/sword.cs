@@ -8,8 +8,6 @@ public class sword : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		attackTimer = 0;
-
-
 	}
 	
 	// Update is called once per frame
@@ -20,12 +18,16 @@ public class sword : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.tag == "enemy" && attackTimer > 0) {
-			col.GetComponent<enemyChar> ().damage (20,SwordHolder.transform.forward);
+			col.GetComponent<enemyChar> ().damage (20);
 		}
 	}
 
 	void attackFunc(){
-		if (SwordHolder.GetComponent<Animator> ().GetBool ("attack"))
-			attackTimer = 0.6f;
+		if (SwordHolder.GetComponent<Animator> ().GetBool("attack"))
+			attackTimer = 0.8f;
+	}
+
+	public float getAttackTimer(){
+		return attackTimer;
 	}
 }

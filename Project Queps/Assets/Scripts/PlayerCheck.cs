@@ -3,20 +3,23 @@ using System.Collections;
 
 public class PlayerCheck : MonoBehaviour {
 	private bool seesPlayer=false;
+	public GameObject host;
+	private GameObject player;
 	// Use this for initialization
 	void Start () {
-	
+		this.host = transform.root.gameObject;
 	}
 
 	void OnTriggerStay(Collider col){
 		if (col.gameObject.tag == "Player"){
-			this.seesPlayer=true;
-
+			//Debug.Log("I see you");
+			host.GetComponent<Animator>().SetBool("seesPlayer",true);
 		}
 	}
 	void OnTriggerExit(Collider col){
 		if (col.gameObject.tag == "Player"){
-			this.seesPlayer=false;
+			Debug.Log("Player Exited FOV");
+			host.GetComponent<Animator>().SetBool("seesPlayer",false);
 			
 		}
 	}

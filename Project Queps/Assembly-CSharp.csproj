@@ -56,6 +56,9 @@
      <Compile Include="Assets\Scripts\hideCursor.cs" />
      <Compile Include="Assets\Scripts\sceneChanger.cs" />
      <Compile Include="Assets\Scripts\sword.cs" />
+     <None Include="Assets\meshes\gravestuff\Mausoleum\READ ME.txt" />
+     <None Include="Assets\meshes\gravestuff\grave\Read Me.txt" />
+     <None Include="Assets\meshes\gravestuff\Mausoleum\Textures\Texture Note.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

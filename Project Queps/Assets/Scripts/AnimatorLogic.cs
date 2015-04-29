@@ -16,6 +16,7 @@ public class AnimatorLogic : MonoBehaviour {
 	private float speed;
 	private float horizontal = 0.0f;
 	private float vertical = 0.0f;
+	public GameObject sword;
 	#endregion
 
 	#region targetting
@@ -28,8 +29,6 @@ public class AnimatorLogic : MonoBehaviour {
 	bool next = false;
 	public RaycastHit hit;
 	private float shieldWeight;
-	private float attacktime = 0;
-	private float rollWeight;
 	private float rolltime = 0;
 	#endregion
 	
@@ -44,7 +43,6 @@ public class AnimatorLogic : MonoBehaviour {
 		maxHealth = health;
 		print("player health is:" + health);
 		shieldWeight = 0f;
-		rollWeight = 0f;
 
 		animator = GetComponent<Animator>();
 	}
@@ -65,15 +63,17 @@ public class AnimatorLogic : MonoBehaviour {
 		}
 
 		// movement
-		horizontal = Input.GetAxis("Horizontal");
-		vertical = Input.GetAxis("Vertical");
+		if (animator.GetBool ("groundCheck")) {
+			horizontal = Input.GetAxis ("Horizontal");
+			vertical = Input.GetAxis ("Vertical");
+		}
 		
 		animator.SetFloat ("x", horizontal);
 		animator.SetFloat ("y", vertical);
 		Vector3 stick = new Vector3(horizontal,0, vertical);
 
-		if(animator.GetBool("groundCheck"))
-			speed = Mathf.Clamp (new Vector2(horizontal, vertical).sqrMagnitude,0f,1f);
+
+		speed = Mathf.Clamp (new Vector2(horizontal, vertical).sqrMagnitude,0f,1f);
 		animator.SetFloat("Speed",speed);
 
 		//normal movement
@@ -84,35 +84,34 @@ public class AnimatorLogic : MonoBehaviour {
 			Quaternion constrained = Quaternion.Euler(0.0f, targetRotation.eulerAngles.y, 0.0f);
 			transform.rotation = Quaternion.Slerp(transform.rotation, constrained, Time.deltaTime * rotationspeed );
 		}
+
 		//Jump
-		if(Input.GetButtonDown ("Jump") ){
-			if(animator.GetBool("groundCheck")){
+		if(Input.GetButtonDown ("Jump") && sword.GetComponent<sword>().getAttackTimer() <= 0){
+			if(animator.GetBool("groundCheck") && rolltime <= 0){
 				GetComponent<Rigidbody>().AddRelativeForce (Vector3.up * jumppower);
 				GetComponent<AudioSource>().PlayOneShot(jumpsound);
 			}	
 		}
+
 		if(rolltime > 0)
 			rolltime -= Time.deltaTime;
-		//if (rolltime <= 0)
-			//animator.SetLayerWeight (2, 1);
+
 		// Roll
 		if (Input.GetButtonDown ("roll")) {
 			if(animator.GetBool("groundCheck")){
-				animator.SetLayerWeight(2, 0);
-				animator.SetBool("roll",true);
-				rolltime = 1.2f;
+				animator.SetTrigger("roll");
+				rolltime = 0.8f;
 			}
 		}
 		if (Input.GetButtonUp ("roll")) {
-			animator.SetBool("roll",false);
+			animator.ResetTrigger ("roll");
 		}
 
 		//Attack
-		animator.SetBool("attack", false);
+		//animator.SetBool("attack", false);
 		if (Input.GetButtonDown ("Attack") && rolltime <= 0) {
-			animator.SetLayerWeight (2, 1);
-			attacktime = 1.2f;
-			animator.SetBool("attack", true);
+			//animator.SetBool("attack", true);
+			animator.SetTrigger("attack");
 		}
 	}
 
@@ -167,18 +166,11 @@ public class AnimatorLogic : MonoBehaviour {
 
 	private void ShieldFunc(){
 		float speed = 7f;
-		if (Input.GetButton ("Block") && attacktime == 0)
+		if (Input.GetButton ("Block"))
 			animator.SetLayerWeight (1, shieldWeight = Mathf.MoveTowards (shieldWeight, 1f, Time.deltaTime * speed));
 
 		else {
 			animator.SetLayerWeight (1, shieldWeight = Mathf.MoveTowards (shieldWeight, 0f, Time.deltaTime * speed));
-			if(attacktime > 0)
-				attacktime -= Time.deltaTime;
-
-			if (attacktime < 0){
-				attacktime = 0; // fixa 
-				animator.SetLayerWeight (2, rollWeight = Mathf.MoveTowards (rollWeight, 0f, Time.deltaTime * speed));
-			}
 		}
 	}
 

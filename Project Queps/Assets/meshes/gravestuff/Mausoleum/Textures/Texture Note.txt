@@ -1,0 +1,6 @@
+
+For Mausoleum use - Marble texture jpeg
+For Pillars use - Marble texture jpeg
+For Doors use - aged iron jpeg
+For Door knobs use - STEEL4 jpeg
+For Bars use - STEEL4 jpeg
