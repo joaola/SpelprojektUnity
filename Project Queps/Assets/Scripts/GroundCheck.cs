@@ -17,7 +17,7 @@ public class GroundCheck : MonoBehaviour {
 
 	void OnTriggerStay(Collider other) {
 
-		if(other.gameObject.tag != "Player" && other.gameObject.tag != "EnemyCheck"&& other.gameObject.tag != "shield")
+		if(other.gameObject.tag != "Player" && other.gameObject.tag != "EnemyCheck"&& other.gameObject.tag != "shield" && other.gameObject.tag != "enemyWeapon")
 			Creature.GetComponent<Animator>().SetBool("groundCheck",true);
 		//Debug.Log("ground");
 

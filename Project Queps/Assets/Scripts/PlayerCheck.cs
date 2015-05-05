@@ -11,14 +11,12 @@ public class PlayerCheck : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider col){
-		if (col.gameObject.tag == "Player"){
-			//Debug.Log("I see you");
+		if (col.gameObject.tag == "Player" && host.GetComponent<enemyChar>().LineOfSight() == true){
 			host.GetComponent<Animator>().SetBool("seesPlayer",true);
 		}
 	}
 	void OnTriggerExit(Collider col){
 		if (col.gameObject.tag == "Player"){
-			Debug.Log("Player Exited FOV");
 			host.GetComponent<Animator>().SetBool("seesPlayer",false);
 			
 		}

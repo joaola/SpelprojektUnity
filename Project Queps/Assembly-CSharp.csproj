@@ -49,10 +49,15 @@
      <Compile Include="Assets\Scripts\AnimatorLogic.cs" />
      <Compile Include="Assets\Scripts\EnemyCheck.cs" />
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
+     <Compile Include="Assets\Scripts\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\ItemDatabase.cs" />
+     <Compile Include="Assets\Scripts\Looting.cs" />
      <Compile Include="Assets\Scripts\PlayerCheck.cs" />
      <Compile Include="Assets\Scripts\cam.cs" />
      <Compile Include="Assets\Scripts\camerafovchange.cs" />
      <Compile Include="Assets\Scripts\enemyChar.cs" />
+     <Compile Include="Assets\Scripts\enemyWeapon.cs" />
      <Compile Include="Assets\Scripts\hideCursor.cs" />
      <Compile Include="Assets\Scripts\sceneChanger.cs" />
      <Compile Include="Assets\Scripts\sword.cs" />

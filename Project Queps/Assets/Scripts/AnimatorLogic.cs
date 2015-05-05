@@ -9,7 +9,7 @@ public class AnimatorLogic : MonoBehaviour {
 
 	#region Player variables
 	public float health;
-	private float maxHealth;
+	public float maxHealth;
 	public float rotationspeed;
 	public float jumppower = 840;
 	public bool groundCheck;
@@ -17,6 +17,9 @@ public class AnimatorLogic : MonoBehaviour {
 	private float horizontal = 0.0f;
 	private float vertical = 0.0f;
 	public GameObject sword;
+	private float invTimer = 0.0f;
+	private float stamina;
+	private bool staminaBool;
 	#endregion
 
 	#region targetting
@@ -27,7 +30,8 @@ public class AnimatorLogic : MonoBehaviour {
 	private float damping = 30.0f;
 	bool lockOn = false;
 	bool next = false;
-	public RaycastHit hit;
+	private RaycastHit hit;
+	public LayerMask layermask;
 	private float shieldWeight;
 	private float rolltime = 0;
 	#endregion
@@ -41,6 +45,7 @@ public class AnimatorLogic : MonoBehaviour {
 	 
  	private void Start () {
 		maxHealth = health;
+		stamina = 20;
 		print("player health is:" + health);
 		shieldWeight = 0f;
 
@@ -52,7 +57,7 @@ public class AnimatorLogic : MonoBehaviour {
 		PlayerFunc ();
 		LockOnFunc ();
 		ShieldFunc ();
-		//LineOfSight ();
+		LineOfSight ();
 	}
 
 	private void PlayerFunc(){
@@ -62,14 +67,23 @@ public class AnimatorLogic : MonoBehaviour {
 			Destroy(gameObject, 2f);
 		}
 
+		// check if damaged
+		if (invTimer > 0.0f) {
+			invTimer -= Time.deltaTime;
+		}
+
 		// movement
 		if (animator.GetBool ("groundCheck")) {
 			horizontal = Input.GetAxis ("Horizontal");
 			vertical = Input.GetAxis ("Vertical");
 		}
-		
-		animator.SetFloat ("x", horizontal);
-		animator.SetFloat ("y", vertical);
+		Vector3 movement = Vector3.zero;
+		movement.x = horizontal;
+		movement.y = vertical;
+		movement = Vector3.ClampMagnitude (movement, 1.0f);
+
+		animator.SetFloat ("x", movement.x);
+		animator.SetFloat ("y", movement.y);
 		Vector3 stick = new Vector3(horizontal,0, vertical);
 
 
@@ -109,7 +123,7 @@ public class AnimatorLogic : MonoBehaviour {
 
 		//Attack
 		//animator.SetBool("attack", false);
-		if (Input.GetButtonDown ("Attack") && rolltime <= 0) {
+		if (Input.GetButtonDown ("Attack") && rolltime <= 0 && animator.GetBool("groundCheck")) {
 			//animator.SetBool("attack", true);
 			animator.SetTrigger("attack");
 		}
@@ -139,20 +153,18 @@ public class AnimatorLogic : MonoBehaviour {
 					animator.SetBool("lockOn", true);
 					//Debug.Log(target.name);
 				}
-				else
+				else{
 					Debug.Log ("No enemies in range");
+					removeTarget();
+				}
 			}
 			else{
-				lockOn = false;
-				target = null;
-				animator.SetBool("lockOn", false);
+				removeTarget();
 			}
 		}
 		// target out-of-range
 		if (lockOn == true && targetcheck.GetComponent<EnemyCheck> ().getTriggers ().Contains (targ) == false ) {
-			lockOn = false;
-			target = null;
-			animator.SetBool("lockOn", false);
+			removeTarget();
 		}
 		// target in-range, lock on target
 		else if (lockOn == true && targetcheck.GetComponent<EnemyCheck>().getTriggers().Contains(targ) != false){
@@ -166,29 +178,53 @@ public class AnimatorLogic : MonoBehaviour {
 
 	private void ShieldFunc(){
 		float speed = 7f;
-		if (Input.GetButton ("Block"))
+		if (Input.GetButtonDown ("Block")) {
+			staminaBool = true;
+		}
+		else if (Input.GetButtonUp ("Block"))
+		{
+			staminaBool = false;
+		}
+
+		if(animator.GetLayerWeight(1)>0.1)
+				stamina -= Time.deltaTime;
+
+		else if (animator.GetLayerWeight(1)<0.1 && stamina<20.0f)
+			stamina += Time.deltaTime;
+
+		if (stamina <= 0.0f)
+			staminaBool = false;
+
+		if (staminaBool)
 			animator.SetLayerWeight (1, shieldWeight = Mathf.MoveTowards (shieldWeight, 1f, Time.deltaTime * speed));
 
-		else {
+		else
 			animator.SetLayerWeight (1, shieldWeight = Mathf.MoveTowards (shieldWeight, 0f, Time.deltaTime * speed));
-		}
 	}
 
 	public void LineOfSight(){
-		int mask = 1 << 6;
-		mask = ~mask;
 		if (lockOn) {
-			// check if the target is in line of sight
-			if (Physics.Linecast(transform.position, target.position, out hit, mask)) {
-				if (hit.transform.name == target.transform.name){
-					Debug.Log("In LOS");
+			// check if the target is not in line of sight
+			if (Physics.Linecast(transform.position, target.position, out hit, layermask)) {
+				if (hit.transform.name != target.transform.name){
+					removeTarget();
 				}
 			}
 		}
 	}
 
+	private void removeTarget ()
+	{
+		lockOn = false;
+		target = null;
+		animator.SetBool("lockOn", false);
+	}
+
 	public void DamagePlayer(int damage){
-		this.health -= damage;
+		if (invTimer < 0.1f && rolltime < 0.1f) {
+			this.health -= damage;
+			invTimer = 0.65f;
+		}
 	}
 
 	private void fps(){
@@ -216,6 +252,22 @@ public class AnimatorLogic : MonoBehaviour {
 	public Animator getAnimator(){
 		return this.animator;
 	}
+
+	public float getHealth(){
+		return this.health;
+	}
+
+	public float getShieldWeight(){
+		return this.shieldWeight;
+	}
+
+	public bool getLockOn(){
+		return this.lockOn;
+	}
+
+	public void lowerStamina(float stam){
+		this.stamina -= stam;
+	}
 	#endregion
 
 	private void OnGUI(){
@@ -225,6 +277,7 @@ public class AnimatorLogic : MonoBehaviour {
 		if(frames != 0)
 			GUI.Label (new Rect(80, 10, 100, 20), "fps: " + (accum/frames).ToString("f0"));
 		GUI.Box(new Rect(10f,50f,Screen.width / 4f /(maxHealth/health), 20f),"health");
+		GUI.Box (new Rect (10f, 80f, Screen.width / 4f / (20 / stamina), 20f), "stamina");
 	}
 
 }
