@@ -12,18 +12,16 @@ public class enemyWeapon : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.tag == "Player") {
+		if (col.gameObject.tag == "Player" && animator.GetCurrentAnimatorStateInfo(0).IsTag("enemyAttack")) {
 			if(animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2")){
 				col.GetComponent<AnimatorLogic> ().DamagePlayer (40);
 			}
-			else if(col.GetComponent<AnimatorLogic> ().getShieldWeight() == 1.0f){
+			else if(col.GetComponent<AnimatorLogic> ().getShieldWeight() == 1.0f && animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1")){
 				col.GetComponent<AnimatorLogic> ().lowerStamina (5);
 				col.GetComponent<AnimatorLogic> ().DamagePlayer (10);
 			}
 			else
 				col.GetComponent<AnimatorLogic> ().DamagePlayer (20);
-
-			Debug.Log(col.GetComponent<AnimatorLogic> ().getHealth());
 		}
 	}
 

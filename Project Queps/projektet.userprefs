@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Looting.cs">
+    <Files>
+      <File FileName="Assets\Scripts\EnemyCheck.cs" Line="11" Column="8" />
+      <File FileName="Assets\Scripts\Looting.cs" Line="18" Column="34" />
+      <File FileName="Assets\Scripts\ItemDatabase.cs" Line="13" Column="43" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

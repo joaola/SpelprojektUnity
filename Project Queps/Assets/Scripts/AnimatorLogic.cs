@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AnimatorLogic : MonoBehaviour {
 	private Animator animator;
@@ -12,28 +13,24 @@ public class AnimatorLogic : MonoBehaviour {
 	public float maxHealth;
 	public float rotationspeed;
 	public float jumppower = 840;
-	public bool groundCheck;
 	private float speed;
 	private float horizontal = 0.0f;
 	private float vertical = 0.0f;
 	public GameObject sword;
 	private float invTimer = 0.0f;
 	private float stamina;
-	private bool staminaBool;
 	#endregion
 
 	#region targetting
 	public Transform target;
 	private Transform temptarget;
 	private GameObject targ;
-	public GameObject targetcheck;
+	public List<GameObject> enemies = new List<GameObject>();
+	//public GameObject targetcheck;
 	private float damping = 30.0f;
-	bool lockOn = false;
-	bool next = false;
 	private RaycastHit hit;
 	public LayerMask layermask;
 	private float shieldWeight;
-	private float rolltime = 0;
 	#endregion
 	
 	#region fps
@@ -42,14 +39,26 @@ public class AnimatorLogic : MonoBehaviour {
 	private int frames = 0; // Frames drawn over the interval
 	private float timeleft;
 	#endregion
-	 
+
+	#region bools
+	public bool groundCheck;
+	private bool attackStamina=false;
+	private bool lockOn = false;
+	private bool staminaBool;
+	bool next = false;
+	private bool rollBool = false;
+	#endregion
+
  	private void Start () {
+		animator = GetComponent<Animator>();
 		maxHealth = health;
 		stamina = 20;
-		print("player health is:" + health);
 		shieldWeight = 0f;
 
-		animator = GetComponent<Animator>();
+		GameObject[] enemies2 = GameObject.FindGameObjectsWithTag ("enemy");
+		foreach (GameObject enemy in enemies2) {
+			enemies.Add(enemy);
+		}
 	}
 	
 	private void Update () {
@@ -63,9 +72,14 @@ public class AnimatorLogic : MonoBehaviour {
 	private void PlayerFunc(){
 		// health-check
 		if (health <= 0){
+			foreach(GameObject enemy in enemies)
+				enemy.GetComponent<enemyChar>().playerTarget = null;
 			Debug.Log("the player has died" + health);
 			Destroy(gameObject, 2f);
 		}
+
+		if (stamina < 0)
+			stamina = 0;
 
 		// check if damaged
 		if (invTimer > 0.0f) {
@@ -100,81 +114,112 @@ public class AnimatorLogic : MonoBehaviour {
 		}
 
 		//Jump
-		if(Input.GetButtonDown ("Jump") && sword.GetComponent<sword>().getAttackTimer() <= 0){
-			if(animator.GetBool("groundCheck") && rolltime <= 0){
+		if(Input.GetButtonDown ("Jump") && !(animator.GetCurrentAnimatorStateInfo(0).IsTag("attack"))){
+			if(animator.GetBool("groundCheck") && !animator.GetCurrentAnimatorStateInfo(0).IsTag("dodge")){
 				GetComponent<Rigidbody>().AddRelativeForce (Vector3.up * jumppower);
 				GetComponent<AudioSource>().PlayOneShot(jumpsound);
 			}	
 		}
-
-		if(rolltime > 0)
-			rolltime -= Time.deltaTime;
-
+		
 		// Roll
-		if (Input.GetButtonDown ("roll")) {
+		if (Input.GetButtonDown ("roll") && stamina >= 6.5f) {
 			if(animator.GetBool("groundCheck")){
 				animator.SetTrigger("roll");
-				rolltime = 0.8f;
+				rollBool = true;
+
+				//stamina -= 6.5f;
 			}
 		}
-		if (Input.GetButtonUp ("roll")) {
-			animator.ResetTrigger ("roll");
+
+		if (rollBool == true && !animator.GetBool ("roll")) {
+			rollBool = false;
+			stamina -= 6.5f;
 		}
 
+
 		//Attack
-		//animator.SetBool("attack", false);
-		if (Input.GetButtonDown ("Attack") && rolltime <= 0 && animator.GetBool("groundCheck")) {
-			//animator.SetBool("attack", true);
+		if (Input.GetButtonDown ("Attack") && animator.GetBool("groundCheck") && stamina >= 3) {
 			animator.SetTrigger("attack");
+			attackStamina=true;
+
 		}
+		if (attackStamina == true && !animator.GetBool ("attack")) {
+			attackStamina=false;
+			stamina -= 3.0f;
+		}
+
 	}
 
 	public void LockOnFunc(){
+		if (Input.GetButtonDown ("lock on")) {
+			if (lockOn){
+				targ = null;
+				lockOn = !lockOn;
+				animator.SetBool("lockOn",!animator.GetBool("lockOn"));
+			}
+			else
+				targ = FindClosestEnemy();
+			if(targ!=null){
+				target = targ.transform;
+				animator.SetBool("lockOn",!animator.GetBool("lockOn"));
+				lockOn = !lockOn;
+			}
+		}
 		// Swap to next enemy
-		if (lockOn && Input.GetButtonDown ("Next Enemy")) {
-			Transform temp = targetcheck.GetComponent<EnemyCheck>().FindNextEnemy(targ).transform;
-			GameObject tempg = targetcheck.GetComponent<EnemyCheck> ().FindNextEnemy (targ);
-
-			if(temp != null){
-				target = temp;
-				targ = tempg;
-			}
+		if (lockOn && Input.GetButtonDown ("Next Enemy") && enemies.Count > 1) {
+			target = FindNextEnemy (targ).transform;
+			targ = target.gameObject;
+			
 		}
 
-		// lock-on
-		if (Input.GetButtonDown("lock on")) {
-			if(!lockOn){
-				// get current target
-				temptarget = targetcheck.GetComponent<EnemyCheck> ().getTarget ();
-				targ = targetcheck.GetComponent<EnemyCheck> ().getObject ();
-				if(temptarget!=null){
-					target = temptarget;
-					lockOn = true;
-					animator.SetBool("lockOn", true);
-					//Debug.Log(target.name);
-				}
-				else{
-					Debug.Log ("No enemies in range");
-					removeTarget();
-				}
-			}
-			else{
-				removeTarget();
-			}
-		}
-		// target out-of-range
-		if (lockOn == true && targetcheck.GetComponent<EnemyCheck> ().getTriggers ().Contains (targ) == false ) {
-			removeTarget();
-		}
-		// target in-range, lock on target
-		else if (lockOn == true && targetcheck.GetComponent<EnemyCheck>().getTriggers().Contains(targ) != false){
+		if(lockOn && LineOfSight())
+		{
 			var newRotation = Quaternion.LookRotation(target.position - transform.position).eulerAngles;
 			newRotation.x = 0;
 			newRotation.z = 0;
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime*damping);
-			//player.transform.LookAt (new Vector3(target.position.x, player.transform.position.y, target.position.z));
 		}
 	}
+
+	GameObject FindClosestEnemy(){
+		GameObject closest = null;
+		float distance = Mathf.Infinity;
+		Vector3 position = transform.position;
+		
+		foreach (GameObject enemy in enemies) {
+			if(enemy != null){
+				Vector3 diff = enemy.transform.position - position;
+				float curDistance = diff.sqrMagnitude;
+				if (curDistance < distance) {
+					closest = enemy;
+					distance = curDistance;
+				}
+			}
+		}
+		return closest;
+	}
+
+	GameObject FindNextEnemy(GameObject currTarget){
+		List<GameObject> tempList = new List<GameObject>(enemies);
+		tempList.Remove (currTarget);
+		
+		GameObject next = null;
+		float distance = Mathf.Infinity;
+		Vector3 position = transform.position;
+		
+		foreach (GameObject go in tempList) {
+			if (go != null) {
+				Vector3 diff = go.transform.position - position;
+				float curDistance = diff.sqrMagnitude;
+				if (curDistance < distance) {
+					next = go;
+					distance = curDistance;
+				}
+			}
+		}
+		return next;
+	}
+
 
 	private void ShieldFunc(){
 		float speed = 7f;
@@ -190,7 +235,7 @@ public class AnimatorLogic : MonoBehaviour {
 				stamina -= Time.deltaTime;
 
 		else if (animator.GetLayerWeight(1)<0.1 && stamina<20.0f)
-			stamina += Time.deltaTime;
+			stamina += Time.deltaTime*3;
 
 		if (stamina <= 0.0f)
 			staminaBool = false;
@@ -202,26 +247,29 @@ public class AnimatorLogic : MonoBehaviour {
 			animator.SetLayerWeight (1, shieldWeight = Mathf.MoveTowards (shieldWeight, 0f, Time.deltaTime * speed));
 	}
 
-	public void LineOfSight(){
-		if (lockOn) {
+	public bool LineOfSight(){
+		if (target != null && lockOn) {
 			// check if the target is not in line of sight
-			if (Physics.Linecast(transform.position, target.position, out hit, layermask)) {
+			if (Physics.Linecast(gameObject.transform.FindChild("camtarget").position, target.Find("Armature_001/Bone/spine/rib/neck/head").position, out hit, layermask)) {
 				if (hit.transform.name != target.transform.name){
 					removeTarget();
+					return false;
 				}
 			}
 		}
+		return true;
 	}
 
 	private void removeTarget ()
 	{
 		lockOn = false;
-		target = null;
+		targ = null;
 		animator.SetBool("lockOn", false);
 	}
 
 	public void DamagePlayer(int damage){
-		if (invTimer < 0.1f && rolltime < 0.1f) {
+		if (invTimer < 0.1f && !animator.GetCurrentAnimatorStateInfo(0).IsTag("dodge")) {
+			animator.SetTrigger("hit");
 			this.health -= damage;
 			invTimer = 0.65f;
 		}
@@ -276,8 +324,17 @@ public class AnimatorLogic : MonoBehaviour {
 		GUI.Label(new Rect(10, 10, 100, 20), "fov: " + Camera.main.fieldOfView.ToString("f2"));
 		if(frames != 0)
 			GUI.Label (new Rect(80, 10, 100, 20), "fps: " + (accum/frames).ToString("f0"));
-		GUI.Box(new Rect(10f,50f,Screen.width / 4f /(maxHealth/health), 20f),"health");
-		GUI.Box (new Rect (10f, 80f, Screen.width / 4f / (20 / stamina), 20f), "stamina");
-	}
+		GUI.Box(new Rect(10f,50f,Screen.width / 4f /(maxHealth/health), 20f), health + "/" + maxHealth);
+		GUI.Box (new Rect (10f, 80f, Screen.width / 4f / (20 / stamina), 20f), stamina.ToString("f0") + "/" + "20");
 
+		if (lockOn && target != null) {
+			int hp = target.GetComponent<enemyChar> ().enemyHealth;
+			int maxhp = target.GetComponent<enemyChar> ().maxenemyHealth;
+			if(hp > 0)
+				GUI.Box (new Rect (Screen.width - 250f, 50f, Screen.width / 4f / (maxhp / hp), 20f), hp + "/" + maxhp);
+
+			else if (hp <= 0)
+				removeTarget();
+		}
+	}
 }

@@ -8,7 +8,7 @@ public class EnemyCheck : MonoBehaviour {
 	public GameObject player;
 	private GameObject nextTargObj;
 	private Transform nextTarget;
-	private List<GameObject> triggers = new List<GameObject>();
+	public List<GameObject> triggers = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {

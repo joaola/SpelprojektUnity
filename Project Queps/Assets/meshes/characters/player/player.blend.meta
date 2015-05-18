@@ -446,7 +446,23 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: Curve
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 4.90311527
+            value: .277668536
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
       events: []
       transformMask:
       - path: 
@@ -2267,7 +2283,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .294270813
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .840277731
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -2631,7 +2663,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .306666672
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 6abce492f197c8c40a7c438036a24805,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -2813,7 +2853,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .456476599
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 85411ff7f8d7407429ec0a835498acba,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -3723,7 +3771,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .485243082
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .994791687
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -3905,7 +3969,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .671006918
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .99218756
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -4087,7 +4167,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .606770813
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .977430522
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -4633,7 +4729,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .328125
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: db74f78a2373fa6438b90c60686de753,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -4997,7 +5101,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .370000005
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: c1ee06865a0eda64cbed76f9b426b4e4,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -5179,7 +5291,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .620659769
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .987847269
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -5361,7 +5489,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .607638896
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .987847269
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -5543,7 +5687,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .631944478
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .986979187
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -5725,7 +5885,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .622395813
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .990314782
+        functionName: PlaySoundEffects
+        data: 
+        objectReferenceParameter: {fileID: 8300000, guid: 8189fa4eb2fe1d749b5cf430221e0a37,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

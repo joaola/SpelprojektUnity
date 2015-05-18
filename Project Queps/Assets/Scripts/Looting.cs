@@ -11,9 +11,12 @@ public class Looting : MonoBehaviour {
 	public int lootedArea;
 	private Random rnd = new Random();
 	public int pickup;
+	public Animator chestanim;
 
 	// Use this for initialization
 	void Start () {
+		inv = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+		this.chestanim = transform.root.gameObject.GetComponent<Animator>();
 		lootedArea = 0;
 		containPlayer = false;
 		inv = looter.GetComponent<Inventory>();
@@ -21,10 +24,12 @@ public class Looting : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (containPlayer && Input.GetKey (KeyCode.E) && lootedArea == 0) {
-			inv.AddItem (Random.Range(0,9));
+		if (containPlayer && Input.GetKey (KeyCode.E) && lootedArea == 0 && chestanim.GetBool("open")!=true) {
+			inv.AddItem (pickup);
 			//inv.AddItem(pickup);
 			lootedArea = 1;
+			this.chestanim.SetBool("open",true);
+			Destroy(gameObject, 0.0f);
 		}
 
 		if (containPlayer == false) {
@@ -50,7 +55,7 @@ public class Looting : MonoBehaviour {
 		
 		if (containPlayer) {
 			GUI.contentColor = Color.black;
-			GUI.Label (new Rect (100, 80, 300, 20), "Press E to Loot" );
+			GUI.Label (new Rect (100, 110, 300, 20), "Press E to Loot" );
 		}
 	}
 

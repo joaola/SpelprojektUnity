@@ -26,6 +26,8 @@ public class cam : MonoBehaviour {
 	private RaycastHit hit;
 	private Vector3 hit2;
 	private float tempDistance;
+	public GameObject inv;
+
 
 	void Start () {
 		sidestep2 = 0;
@@ -33,37 +35,36 @@ public class cam : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		x += xspeed* Input.GetAxis("Mouse X");
-		y -= yspeed* Input.GetAxis("Mouse Y");
-		if(y > yMax){
-			y = yMax;
+		if (!inv.GetComponent<Inventory> ().Getshowinv ()) {
+			x += xspeed * Input.GetAxis ("Mouse X");
+			y -= yspeed * Input.GetAxis ("Mouse Y");
+			if (y > yMax) {
+				y = yMax;
+			} else if (y < yMin) {
+				y = yMin;
+			}
 		}
-		else if(y < yMin){
-			y = yMin;
-		}
-		if(Input.GetButtonDown("tab") && sidestep2>0 && sidestep2 != 0){
-			//Creature.GetComponent<AnimatorLogic>().DamagePlayer(10);
-			sidestep2 *=(-1);
-		}
-		else if(Input.GetButtonDown("tab") && sidestep2<0){
-			sidestep2 = 0;
-		}
-		else if(Input.GetButtonDown("tab") && sidestep2 == 0){
-			sidestep2 = sidestep;
-		}
+			if (Input.GetButtonDown ("tab") && sidestep2 > 0 && sidestep2 != 0) {
+				//Creature.GetComponent<AnimatorLogic>().DamagePlayer(10);
+				sidestep2 *= (-1);
+			} else if (Input.GetButtonDown ("tab") && sidestep2 < 0) {
+				sidestep2 = 0;
+			} else if (Input.GetButtonDown ("tab") && sidestep2 == 0) {
+				sidestep2 = sidestep;
+			}
 		
-		var rotation =  Quaternion.Euler(y,x,0);
-		var position = rotation * new Vector3(sidestep2,height, -distance) + target.position ;
+			var rotation = Quaternion.Euler (y, x, 0);
+			var position = rotation * new Vector3 (sidestep2, height, -distance) + target.position;
 		
-		transform.rotation = rotation;
-		transform.position =  position;
+			transform.rotation = rotation;
+			transform.position = position;
 		
 		
-		if(Physics.Linecast(target.position-transform.forward,transform.position, out hit, layermask)){
-			tempDistance = Vector3.Distance(target.position,hit.point) ;
-			position = rotation * new Vector3(sidestep2, height, -tempDistance) + target.position;
-			transform.position = position+ transform.forward;			
-		}
+			if (Physics.Linecast (target.position - transform.forward, transform.position, out hit, layermask)) {
+				tempDistance = Vector3.Distance (target.position, hit.point);
+				position = rotation * new Vector3 (sidestep2, height, -tempDistance) + target.position;
+				transform.position = position + transform.forward;			
+			}
 		
 	}
 	/*void OnCollisionStay(Collision collision){

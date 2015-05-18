@@ -39,6 +39,8 @@ public class Inventory : MonoBehaviour {
 
 	void Update(){
 		if (Input.GetButtonDown ("Inventory")) {
+
+			Cursor.visible = true;
 			showInventory = !showInventory;
 		}
 
@@ -48,12 +50,15 @@ public class Inventory : MonoBehaviour {
 
 		if (showInventory == false) 
 		{
+			Cursor.visible = false;
 			showToolTip = false;
 		}
 
 
 	}
-	
+	public bool Getshowinv(){
+		return this.showInventory;
+	}
 	void OnGUI(){
 		tooltip = "";
 
