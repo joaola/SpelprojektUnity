@@ -21,6 +21,8 @@ public class Inventory : MonoBehaviour {
 
 	private AnimatorLogic AnLog;
 
+	public AudioClip drinkSound;
+
 	// Use this for initialization
 	void Start () {
 		for(int i=0;i<(slotsX*slotsY);i++){
@@ -201,16 +203,19 @@ public class Inventory : MonoBehaviour {
 			case 1:{//redbull
 				print ("used consumable:" + item.itemName);
 				AnLog.DamagePlayer(-(item.itemPower));
+				GetComponent<AudioSource>().PlayOneShot(drinkSound);
 				break;
 			}
 			case 2:{//health potion
 				print ("used consumable:" + item.itemName);
 				AnLog.health=AnLog.maxHealth;
+				GetComponent<AudioSource>().PlayOneShot(drinkSound);
 				break;
 			}
 			case 3:{//pabst blue ribbon
 				print ("used consumable:" + item.itemName);
 				AnLog.DamagePlayer(item.itemPower);
+				GetComponent<AudioSource>().PlayOneShot(drinkSound);
 				break;
 			}
 			case 4:{//sword

@@ -117,7 +117,7 @@ public class AnimatorLogic : MonoBehaviour {
 		if(Input.GetButtonDown ("Jump") && !(animator.GetCurrentAnimatorStateInfo(0).IsTag("attack"))){
 			if(animator.GetBool("groundCheck") && !animator.GetCurrentAnimatorStateInfo(0).IsTag("dodge")){
 				GetComponent<Rigidbody>().AddRelativeForce (Vector3.up * jumppower);
-				GetComponent<AudioSource>().PlayOneShot(jumpsound);
+				//GetComponent<AudioSource>().PlayOneShot(jumpsound);
 			}	
 		}
 		
